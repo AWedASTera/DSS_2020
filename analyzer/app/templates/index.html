@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<title>Analyzer of images and toponymes</title>
+<head></head>
+<body>
+<h2>Analyzer of images and toponymes</h2>
+
+{% for post in dfdata %}
+<div>
+    <h3>Post from {{post.timestamp}}</h3>
+    <p>{{ post.text }}</p>
+    <p><b>Toponymes: </b></p>
+    <p>{%for toponyme in post.toponymes%}{{toponyme}}, {% endfor %}</p>
+    {% if post.geo %}
+    <p><b>Geodata:</b> {{post.geo}}</p>
+    {% endif %}
+    {% for photo in post.photos %}
+    <img src="{{ photo.url }}">
+    <br/>
+    <p>Description: {{ photo.description }}</p>
+    <br/>
+    {% endfor %}
+</div>
+{% endfor %}
+</body>
+</html>
