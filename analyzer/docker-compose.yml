@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  analyzer:
+    image: analyzer
+    container_name: analyzer
+    ports:
+      - "4000:4000"
+    build:
+      context: .
+      dockerfile: ./Dockerfile

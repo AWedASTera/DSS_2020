@@ -1,7 +1,7 @@
 version: '3.4'
 
 x-infra: &infra-variables
-  SPARK_CORES_MAX: 3
+  SPARK_CORES_MAX: 1
   ES_ADDRESS: elasticsearch
   SPARK_ADDRESS: spark://spark:7077
 

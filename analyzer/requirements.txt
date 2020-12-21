@@ -1,0 +1,9 @@
+elasticsearch
+flask
+natasha
+yacs
+lmdbdict
+gensim
+tensorflow
+keras
+fire

@@ -6,6 +6,49 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
+import java.util.List;
+import java.io.Serializable;
+
+
+@Data
+@NoArgsConstructor
+class Sizes implements Serializable{
+
+    private String url;
+
+    private Integer width;
+
+    private Integer height;
+
+    private String type;
+
+}
+
+@Data
+@NoArgsConstructor
+class Photo implements Serializable{
+
+    private List<Sizes> sizes;
+
+}
+
+
+@Data
+@NoArgsConstructor
+class Geo implements Serializable{
+
+    private String coordinates;
+    
+}
+
+@Data
+@NoArgsConstructor
+class Attachment implements Serializable{
+
+    private Photo photo;
+
+}
+
 @Data
 @NoArgsConstructor
 @Document(indexName = "wall_posts")
@@ -24,6 +67,10 @@ public class WallPost {
     private Long signerId;
 
     private String text;
+
+    private List<Attachment> attachments;
+
+    private Geo geo;
 
     private Long edited;
 
