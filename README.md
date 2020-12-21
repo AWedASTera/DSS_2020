@@ -5,11 +5,11 @@ First, local sturtup
 3. ./run.sh up -d
 
 After "./run sh up -d" command you should see: <br>
-![alt text](./util/readme-data/startup.png)<br><br>
+![alt text](./vk-crawler/util/readme-data/startup.png)<br><br>
 Run **"docker ps"** - make sure that all containers are healthy:
-![alt text](./util/readme-data/docker.png)<br><br>
+![alt text](./vk-crawler/util/readme-data/docker.png)<br><br>
 Go to [Spark-Master UI](http://localhost:8080) and check that all services connected to cluster:<br>
-![alt text](./util/readme-data/spark.png)
+![alt text](./vk-crawler/util/readme-data/spark.png)
 
 secondly, build trend analysis image:
 	cd ../analyzer
