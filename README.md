@@ -12,6 +12,7 @@ Go to [Spark-Master UI](http://localhost:8080) and check that all services conne
 ![alt text](./vk-crawler/util/readme-data/spark.png)
 
 secondly, build analyser image:
+	download AI_analyzer from https://drive.google.com/file/d/1BmE0x_jfT4MdRda__g1Ce9mIVX1V6lE/view?usp=sharing and unpack it to analyzer/app
 	cd ../analyzer
 	docker-compose build analyzer
 	docker-compose up -d analyzer
