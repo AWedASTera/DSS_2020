@@ -11,7 +11,7 @@ Run **"docker ps"** - make sure that all containers are healthy:
 Go to [Spark-Master UI](http://localhost:8080) and check that all services connected to cluster:<br>
 ![alt text](./vk-crawler/util/readme-data/spark.png)
 
-secondly, build trend analysis image:
+secondly, build analyser image:
 	cd ../analyzer
 	docker-compose build analyzer
 	docker-compose up -d analyzer
